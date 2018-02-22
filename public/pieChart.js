@@ -41,7 +41,3 @@ const PieChart = function () {
 
 
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  new PieChart();
-});
