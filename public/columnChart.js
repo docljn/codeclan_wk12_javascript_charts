@@ -1,4 +1,4 @@
-const ColumnChart = function(titleText, seriesArray, xAxisCategoriesArray){
+const ColumnChart = function(titleText, seriesName, seriesArray, xAxisCategoriesArray){
   const container = document.querySelector("#column-chart");
   const chart = new Highcharts.Chart({
     chart: {
@@ -6,7 +6,7 @@ const ColumnChart = function(titleText, seriesArray, xAxisCategoriesArray){
       renderTo: container
     },
     title: {text: titleText},
-    series: [{name: "whatever", data:seriesArray}],
+    series: [{name: seriesName, data:seriesArray}],
     xAxis: {categories: xAxisCategoriesArray}
   });
 };

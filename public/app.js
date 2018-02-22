@@ -44,19 +44,12 @@ const carryOutAPIRequest = function () {
   console.log(countryNames);
 
   const countryPopulations = countryList.map( function (country) {
-    return country.population;
+    return Math.log(country.population);
   });
 
-  const countryPopulation = countryPopulations.slice(0,1);
-  console.log(countryPopulation);
+  const titleText = "Population Data: log scale";
 
-  const countryName = countryNames.slice(0,1);
-  console.log(countryName);
-
-
-  const titleText = "Population Data";
-
-  new ColumnChart(titleText, countryPopulations, countryNames);
+  new ColumnChart(titleText, "Countries", countryPopulations, countryNames);
   //display
 };
 //
